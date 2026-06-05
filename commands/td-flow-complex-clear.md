@@ -4,7 +4,15 @@ description: Rigorous mid-project checkpoint for complex multi-day work. Enhance
 
 You are checkpointing a complex session where standard `/td-flow-clear` is too loose. The user wears this command when the work spans multiple phases, decisions, partial human-in-loop deliverables, parallel runs, or external dependencies — situations where a state-of-the-world dump misses operational substance (who-does-what-next, what's-running-now, what-disappears-on-reboot).
 
-Same baseline rhythm as `/td-flow-clear` (steps 1–6, 8, 9). The differences are **Step 7** (STATE rewrite — now structurally enforced), **Step 7.5** (self-validation gate), and an expanded **Step 5** (capture decisions + conversation-only context).
+Same baseline rhythm as `/td-flow-clear` (steps 1–6, 8, 9). The differences are **Step 0** (the backlog ask runs FIRST, before anything else), **Step 7** (STATE rewrite — now structurally enforced), **Step 7.5** (self-validation gate), and an expanded **Step 5** (capture decisions + conversation-only context).
+
+# Step 0 — Backlog ask (always first)
+
+**Before anything else** — before memory, audits, squashing, or pruning — ask the user:
+
+> "Anything to add to the backlog before we clear?"
+
+Append whatever comes back to `.td-flow/BACKLOG.md` (or, for action-shaped items, file directly as typed GH issues per the contract's "park this" path). **Why first:** the user brain-dumps best while the session is still warm, and the answer can change what the handoff captures — asking late risks writing a STATE before a load-bearing item surfaces. Only after this answer is in does the rest of the procedure run.
 
 # Step 1 — Update memory
 
@@ -26,7 +34,7 @@ Identical to `/td-flow-clear` Step 4.
 
 Two sub-steps:
 
-**5a. Backlog**: ask the user "Anything to add to the backlog before we clear?" — same as `/td-flow-clear`.
+**5a. Backlog**: already collected in **Step 0** — do not re-ask. Fold in any items that arrived conversationally since (late mid-procedure mentions count).
 
 **5b. Conversation-only context** (new, REQUIRED): scan the session for **decisions whose rationale lived only in chat, not in any committed doc**. Common patterns:
 
